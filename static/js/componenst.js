@@ -1,14 +1,13 @@
 import { LinkAbout, Title_experience } from "./data.js";
 
-
 //** Items About */
 $(document).ready(function () {
-    displayLinks();
-    displayExperiences();
-  });
-  
-// Link about
-function displayLinks() {
+  About();
+  Experiences();
+});
+
+//* Link icon about
+function About() {
   const icon_loading = $("#loading-icons");
   LinkAbout.forEach((link) => {
     const linkElement = `
@@ -23,8 +22,9 @@ function displayLinks() {
 }
 
 //* Title Experience
-function displayExperiences() {
+function Experiences() {
   const title_xperience = $("#pills-tab");
+  const inexper = $("#pills-tabContent");
 
   Title_experience.forEach((data) => {
     const element = `
@@ -40,6 +40,7 @@ function displayExperiences() {
 
     title_xperience.append(element);
   });
+
 }
 
-
+//*
